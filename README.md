@@ -3,7 +3,6 @@
 A cross‑platform **.NET MAUI** application designed to provide **simple reminders** and **essential information** to assist individuals living with dementia and their caregivers.  
 This project integrates key **Human–Computer Interaction (HCI)** principles to ensure the interface is calm, clear, and accessible for users with cognitive and visual challenges.
 
----
 
 ## Overview
 The Dementia Notification App is a user‑centred tool that enhances the independence and daily functioning of individuals with dementia while reducing the burden on caregivers. It offers:
@@ -14,7 +13,6 @@ The Dementia Notification App is a user‑centred tool that enhances the indepen
 
 Developed using findings from the dissertation *Human‑Computer Interaction in Dementia Care: Developing a Dementia Reminder Application*, this app combines ethical data handling, HCI best practice, and accessible interaction design.
 
----
 
 ## Key Principles from the Research
 - **Human‑Computer Interaction (HCI):** Simplified navigation, large buttons, high contrast colours (purple/yellow), and friendly tone to enhance readability and confidence.
@@ -22,7 +20,6 @@ Developed using findings from the dissertation *Human‑Computer Interaction in 
 - **Ethical & Legal Compliance:** Data protection aligned with the **Data Protection Act (2018)** and guidance from dementia care organisations to protect user privacy.
 - **User‑Centred Design:** Developed and refined through focus groups with carers and healthcare professionals to ensure real‑world usability.
 
----
 
 ## Project Structure
 ```
@@ -39,7 +36,6 @@ Developed using findings from the dissertation *Human‑Computer Interaction in 
 └── Resources/                                   # Fonts, images, icons, audio alerts
 ```
 
----
 
 ## Features
 - Simple **Home screen** with clearly listed daily tasks
@@ -53,7 +49,6 @@ Planned enhancements:
 - Secure caregiver login & quick call/SMS feature
 - Theming for **high contrast** or **large type** display modes
 
----
 
 ## How to Use the Application
 
@@ -85,7 +80,6 @@ After installation or deployment, open the Dementia Notification App on your dev
 - Maintain sufficient screen brightness for visibility.
 - Caregivers may assist with setup, especially during first‑time configuration.
 
----
 
 ## Testing Summary
 Testing was conducted using Visual Studio and emulators for Windows and Android. 
@@ -97,7 +91,6 @@ All major navigation paths and reminder functions passed successfully after debu
 
 Overall satisfaction was high, and over half of participants said they would download or recommend the app in its current form.
 
----
 
 ## Development Tools
 - **Language:** C#  
@@ -105,7 +98,6 @@ Overall satisfaction was high, and over half of participants said they would dow
 - **IDE:** Visual Studio 2022  
 - **Testing:** Windows Emulator & Android Simulator
 
----
 
 ## How to Build & Run
 
@@ -133,7 +125,6 @@ dotnet maui run -t windows
 
 Ensure an emulator or connected device is available for deployment.
 
----
 
 ## Future Development
 - Enable **automatic cloud backup** of reminders
@@ -142,7 +133,6 @@ Ensure an emulator or connected device is available for deployment.
 - Expand **multi‑language support**
 - Refine data encryption & authentication systems
 
----
 
 ## Author
 **Charlotte Cannon**  
@@ -151,8 +141,8 @@ Graduate Software Engineer
 - [LinkedIn](https://www.linkedin.com/in/charlotte-cannon-165875195/)  
 - [GitHub](https://github.com/c-cannon13)
 
----
 
 ## License
 This project is provided for educational and portfolio demonstration purposes.  
 © 2024 Charlotte Cannon. All rights reserved.
+
