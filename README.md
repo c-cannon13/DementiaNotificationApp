@@ -85,9 +85,9 @@ After installation or deployment, open the Dementia Notification App on your dev
 Testing was conducted using Visual Studio and emulators for Windows and Android. 
 All major navigation paths and reminder functions passed successfully after debugging. User feedback from **11 caregivers and healthcare professionals** highlighted the app’s:
 
-✅ Ease of use and visual simplicity  
-✅ Helpful daily reminder system  
-⚙️ Suggested improvements in data security and persistent storage  
+- Ease of use and visual simplicity  
+- Helpful daily reminder system  
+- Suggested improvements in data security and persistent storage  
 
 Overall satisfaction was high, and over half of participants said they would download or recommend the app in its current form.
 
@@ -145,4 +145,5 @@ Graduate Software Engineer
 ## License
 This project is provided for educational and portfolio demonstration purposes.  
 © 2024 Charlotte Cannon. All rights reserved.
+
 
