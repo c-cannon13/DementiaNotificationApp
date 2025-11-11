@@ -1,122 +1,158 @@
-Dementia Notification App
+# Dementia Notification App - .NET MAUI
 
-A cross‑platform .NET MAUI app (C#) aiming to provide simple, glanceable reminders and helpful info for people living with dementia and their carers.
+A cross‑platform **.NET MAUI** application designed to provide **simple reminders** and **essential information** to assist individuals living with dementia and their caregivers.  
+This project integrates key **Human–Computer Interaction (HCI)** principles to ensure the interface is calm, clear, and accessible for users with cognitive and visual challenges.
 
-Status: early scaffold. Navigation and pages exist; notifications and data storage are WIP.
+---
 
-Overview
+## Overview
+The Dementia Notification App is a user‑centred tool that enhances the independence and daily functioning of individuals with dementia while reducing the burden on caregivers. It offers:
 
-This project targets a clean, calm interface with large touch targets and minimal cognitive load. The initial version focuses on:
+- **Daily Reminders** for medication, appointments, and activities
+- **Information Page** for storing emergency and contact details
+- **Help Page** for quick access to support and reassurance
 
-A Home screen for today’s reminders
+Developed using findings from the dissertation *Human‑Computer Interaction in Dementia Care: Developing a Dementia Reminder Application*, this app combines ethical data handling, HCI best practice, and accessible interaction design.
 
-An Info page for key details (e.g., name, address, emergency contact)
+---
 
-A Help page with quick access to support information
+## Key Principles from the Research
+- **Human‑Computer Interaction (HCI):** Simplified navigation, large buttons, high contrast colours (purple/yellow), and friendly tone to enhance readability and confidence.
+- **Accessibility:** Clear sans‑serif fonts, large text sizes, calm colour palettes (green and blue), and consistent layout.
+- **Ethical & Legal Compliance:** Data protection aligned with the **Data Protection Act (2018)** and guidance from dementia care organisations to protect user privacy.
+- **User‑Centred Design:** Developed and refined through focus groups with carers and healthcare professionals to ensure real‑world usability.
 
-As the project grows, the goal is to support scheduled local notifications (e.g., medication times), recurring routines, and optional caregiver prompts.
+---
 
-Project Structure
+## Project Structure
+```
 .
-├── App.xaml                     # Global resources, styles
-├── App.xaml.cs                  # Application lifecycle
-├── AppShell.xaml                # Shell navigation & routes
-├── AppShell.xaml.cs
-├── MainPage.xaml                # Home page (reminders hub)
-├── MainPage.xaml.cs
-├── InfoPage.xaml                # Key info screen
-├── InfoPage.xaml.cs
-├── HelpPage.xaml                # Help/support screen
-├── HelpPage.xaml.cs
-├── Platforms/                   # iOS / Android / MacCatalyst / Windows heads
-├── Properties/                  # MAUI configuration
-├── Resources/                   # Fonts, images, raw assets
-├── DementiaNotificationApp.csproj
-└── DementiaNotificationApp.sln
-Features (current)
+├── DementiaNotificationApp.sln                  # Solution
+├── DementiaNotificationApp.csproj               # Project file
+├── App.xaml                                     # Global resources, colour themes
+├── App.xaml.cs                                  # App lifecycle
+├── AppShell.xaml                                # Navigation structure
+├── MainPage.xaml                                # Home page (reminders hub)
+├── InfoPage.xaml                                # Key user & carer information
+├── HelpPage.xaml                                # Emergency assistance & reassurance
+├── Platforms/                                   # iOS / Android / Windows / MacCatalyst
+└── Resources/                                   # Fonts, images, icons, audio alerts
+```
 
-Shell‑based navigation between Home → Info → Help
+---
 
-Accessible default theming via App.xaml
+## Features
+- Simple **Home screen** with clearly listed daily tasks
+- Visual **notifications** and optional audio alerts for reminders
+- **Password‑protected info page** for storing private user data
+- **Emergency Help page** simulating caregiver contact
+- Consistent **confirmation prompts** to avoid accidental actions
 
-Cross‑platform layout using standard MAUI controls
+Planned enhancements:
+- Persistent storage for reminders (SQLite)
+- Secure caregiver login & quick call/SMS feature
+- Theming for **high contrast** or **large type** display modes
 
-Roadmap (next)
+---
 
-Local scheduled notifications (e.g., medication reminders)
+## How to Use the Application
 
-Persistent storage for reminders (Preferences/SQLite)
+### 1. Launching the App
+After installation or deployment, open the Dementia Notification App on your device. You will be taken to the **Home screen**, which displays your daily reminders (e.g., “Take medication at 9:00 AM”).
 
-Caregiver contact card with one‑tap call/text
+### 2. Managing Daily Tasks
+- View your list of reminders on the **Home page**.
+- When a task is complete, tap the **Done** button.
+- A confirmation popup appears — select **Yes** to mark it completed or **No** to cancel.
+- Completed tasks are removed from the list to keep the interface clear.
 
-Large‑type mode & high‑contrast theme toggle
+### 3. Receiving Notifications
+- The app will trigger reminder notifications at preset times.
+- Tap **OK** when you receive a notification to acknowledge it.
 
-Basic onboarding (name, routine times)
+### 4. Using the Information Page
+- Tap **Info** on the Home screen.
+- Enter or update personal details (e.g., name, address, carer phone number).
+- Press **Save** — you will be asked for a password to confirm changes.
+- The app will show a confirmation message if information is successfully saved.
 
-Getting Started
-Prerequisites
+### 5. Accessing Help
+- Tap the **Help** button on the Home screen (or from Info page) to simulate contacting a caregiver.
+- A message such as “Help is on the way” appears for reassurance.
 
-.NET SDK 8.0 (or 7.0) installed
+### 6. Accessibility Tips
+- Use device settings for text enlargement or screen readers if needed.
+- Maintain sufficient screen brightness for visibility.
+- Caregivers may assist with setup, especially during first‑time configuration.
 
-.NET MAUI workloads for your target platform(s)
+---
 
-Install workloads (example):
+## Testing Summary
+Testing was conducted using Visual Studio and emulators for Windows and Android. 
+All major navigation paths and reminder functions passed successfully after debugging. User feedback from **11 caregivers and healthcare professionals** highlighted the app’s:
 
-# Android + iOS + MacCatalyst + Windows
+✅ Ease of use and visual simplicity  
+✅ Helpful daily reminder system  
+⚙️ Suggested improvements in data security and persistent storage  
+
+Overall satisfaction was high, and over half of participants said they would download or recommend the app in its current form.
+
+---
+
+## Development Tools
+- **Language:** C#  
+- **Framework:** .NET MAUI  
+- **IDE:** Visual Studio 2022  
+- **Testing:** Windows Emulator & Android Simulator
+
+---
+
+## How to Build & Run
+
+### Prerequisites
+- **.NET 8 SDK** (or 7)
+- **MAUI workloads** installed via terminal:
+
+```bash
 dotnet workload install maui
-Clone & Run
+```
+
+### Clone and Build
+```bash
 git clone https://github.com/c-cannon13/DementiaNotificationApp.git
 cd DementiaNotificationApp
-
-
-# Build
 dotnet build
+```
 
+### Run the App
+```bash
+dotnet maui run -t windows
+# or
+# dotnet maui run -t android
+```
 
-# Run (choose one)
-dotnet maui run -t android
-# dotnet maui run -t windows
-# dotnet maui run -t ios
-# dotnet maui run -t maccatalyst
+Ensure an emulator or connected device is available for deployment.
 
-If you’re new to MAUI on a platform (e.g., iOS), ensure your local environment is provisioned (Xcode, emulators, signing, etc.).
+---
 
-Configuration
+## Future Development
+- Enable **automatic cloud backup** of reminders
+- Add **voice‑activated commands** (for accessibility)
+- Integrate **caregiver dashboard** for remote oversight
+- Expand **multi‑language support**
+- Refine data encryption & authentication systems
 
-App styles & resources: App.xaml
+---
 
-Shell routes/menu: AppShell.xaml
+## Author
+**Charlotte Cannon**  
+BSc (Hons) Software Engineering — University of Winchester  
+Graduate Software Engineer  
+- [LinkedIn](https://www.linkedin.com/in/charlotte-cannon-165875195/)  
+- [GitHub](https://github.com/c-cannon13)
 
-Platform permissions (for notifications) will be configured under Platforms/* when notifications are added.
+---
 
-Contributing
-
-Fork the repo
-
-Create a feature branch: git checkout -b feature/your-idea
-
-Commit changes: git commit -m "Add feature"
-
-Push and open a PR
-
-Ideas, bugs, or accessibility suggestions are very welcome.
-
-Accessibility Principles
-
-High contrast, large hit‑areas, and clear hierarchy
-
-Minimal text per screen; icons with labels
-
-Consistent placement for primary actions
-
-License
-
-This project is provided for educational and portfolio demonstration purposes.
-
-Author
-
-Charlotte Cannon — Graduate Software Engineer
-
-GitHub: https://github.com/c-cannon13
-
-LinkedIn: https://www.linkedin.com/in/charlotte-cannon-165875195/
+## License
+This project is provided for educational and portfolio demonstration purposes.  
+© 2024 Charlotte Cannon. All rights reserved.
