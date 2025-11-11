@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DementiaNotificationApp.MainPage"
+             Title="Patient App">
+
+
+    <StackLayout Padding="10" BackgroundColor="LightYellow">
+
+        <Grid>
+            <!-- Information Button -->
+            <Button Text="Info"
+                    Clicked="OnInfoButtonClicked"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start" />
+
+            <!-- Help Button -->
+            <Button Text="Help"
+                    Clicked="OnHelpButtonClicked"
+                    FontAttributes="Bold"
+                    HorizontalOptions="End" />
+        </Grid>
+
+        <!-- Hello User Label -->
+        <Label Text="Hello John"
+               FontSize="28"
+               FontAttributes="Bold"
+               Padding="5"
+               Style="{StaticResource Headline}"
+               HorizontalOptions="Center" />
+
+        <!-- Task List -->
+        <ScrollView>
+            <StackLayout x:Name="TaskList" Spacing="15">
+                <Label Text="Todays Tasks" FontSize="Small" FontAttributes="Bold" BackgroundColor="White"></Label>
+                <!-- Tasks will be added here dynamically -->
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+</ContentPage>

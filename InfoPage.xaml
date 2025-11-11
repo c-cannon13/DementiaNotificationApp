@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DementiaNotificationApp.InfoPage"
+             Title="Infomation">
+    
+    <VerticalStackLayout Spacing="5" 
+                         Padding="10" 
+                         BackgroundColor="LightYellow">
+        <Button Text="Help" 
+                Clicked="OnHelpButtonClicked" 
+                FontAttributes="Bold"
+                HorizontalOptions="End" />
+        
+        <Label Text="First Name"  
+               FontAttributes="Bold" 
+               HorizontalOptions="Start"/>
+        <Entry x:Name="FirstName"
+               Placeholder="Enter client's first name" />
+        
+        <Label Text="Last Name" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Start" />
+        <Entry x:Name="LastName"
+               Placeholder="Enter client's last name" />
+        
+        <Label Text="Carer's First Name" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Start" />
+        <Entry x:Name="CarersFirstName"
+               Placeholder="Enter carer's first name" />
+        
+        <Label Text="Carer's Last Name" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Start" />
+        <Entry x:Name="CarersLastName"
+               Placeholder="Enter carer's last name" />
+        
+        <Label Text="Carer's Phone Number" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Start" />
+        <Entry x:Name="CarersNumber"
+               Placeholder="Enter carer's phone number" />
+
+        <Label Text="Carer's Password" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Start" />
+        <Entry x:Name="Password"
+               Placeholder="Enter your password"
+               IsPassword="True"/>
+
+        <Grid>
+            <!-- Back Button -->
+            <Button Text="Back"
+                    Clicked="OnBackButtonClicked"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start" />
+
+            <!-- Save Button -->
+            <Button Text="Save" 
+                    Clicked="OnSaveButtonClicked" 
+                    FontAttributes="Bold"
+                    HorizontalOptions="End" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
